@@ -15,7 +15,7 @@ public class Calculator
 {
 
 	private int total;
-	private String data = "0"; 
+	private String data = "0"; // string variable that will show the history
 	
 	/**
 	 * Class constructor
