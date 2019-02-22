@@ -2,8 +2,8 @@ package cse360assign2;
 
 /**
  * Calculator class contains methods that will perform the four most basic mathematical operations 
- * add, subtract, multiply, and divide. The operations/methods and values used in the calculator will 
- * also be recorded in its history, which can be shown anytime.
+ * add, subtract, multiply, and divide, and it will only take in integer values. The operations/methods 
+ * and values used in the calculator will also be recorded in its history, which can be shown any time.
  * 
  * @author Richard Cao <br>
  * ClassID: 342 <br>
@@ -15,6 +15,7 @@ public class Calculator
 {
 
 	private int total;
+	private String data = "0"; 
 	
 	/**
 	 * Class constructor
@@ -35,33 +36,36 @@ public class Calculator
 	
 	/**
 	 * This method will perform the mathematical operation of addition with the total using the value parameter.
-	 * @param value	the number to be added to the total
+	 * @param value	the integer to be added to the total
 	 */
 	public void add (int value) 
 	{
 		total = total + value;
+		data = data + " + " + value;
 	}
 	/**
 	 * This method will perform the mathematical operation of subtraction with the total using the value parameter.
-	 * @param value	the number to be subtracted from the total
+	 * @param value	the integer to be subtracted from the total
 	 */
 	public void subtract (int value) 
 	{
 		total = total - value;
+		data = data + " - " + value;
 	}
 	
 	/**
 	 * This method will perform the mathematical operation of multiplication with the total using the value parameter.
-	 * @param value	the number to be multiplied with the total
+	 * @param value	the integer to be multiplied with the total
 	 */
 	public void multiply (int value) 
 	{
 		total = total * value;
+		data = data + " * " + value;
 	}
 	
 	/**
 	 * This method will perform the mathematical operation of division with the total using the value parameter.
-	 * @param value	the number to divide the total by
+	 * @param value	the integer to divide the total by
 	 */
 	public void divide (int value) 
 	{
@@ -69,6 +73,7 @@ public class Calculator
 			total = 0;
 		else
 			total = (int) (total / value);
+		data = data + " / " + value;
 	}
 	
 	/**
@@ -77,7 +82,7 @@ public class Calculator
 	 */
 	public String getHistory () 
 	{
-		return "";
+		return data;
 	}
 	
 }
